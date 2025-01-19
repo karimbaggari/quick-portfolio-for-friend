@@ -1,7 +1,10 @@
 import Link from "next/link";
-import React from "react";
+import DropDownNavbar from "./dropDownNavbar";
 
-const navbar = () => {
+const Navbar = () => {
+
+
+
   return (
     <div className="bg-white lg:pb-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -30,30 +33,7 @@ const navbar = () => {
             >
               Home
             </a>
-            <a
-              href="#"
-              className="inline-flex items-center gap-1 text-lg font-semibold text-indigo-500"
-            >
-              Features
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-gray-800"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-            <a
-              href="#"
-              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
-            >
-              Pricing
-            </a>
+            <DropDownNavbar />
             <a
               href="#"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
@@ -61,21 +41,7 @@ const navbar = () => {
               About
             </a>
           </nav>
-          <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
-            <a
-              href="#"
-              className="inline-block rounded-lg px-4 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:text-indigo-500 focus-visible:ring active:text-indigo-600 md:text-base"
-            >
-              Sign in
-            </a>
-
-            <a
-              href="#"
-              className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
-            >
-              Sign up
-            </a>
-          </div>
+ 
 
           <button
             type="button"
@@ -101,4 +67,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
