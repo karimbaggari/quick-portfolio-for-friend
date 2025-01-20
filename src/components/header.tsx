@@ -1,17 +1,17 @@
 import React from "react";
 
-const header = () => {
+const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
-    <section className="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <section className={`mx-auto max-w-screen-2xl px-4 md:px-8 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
       <div className="flex flex-wrap justify-between ">
-        <div className="flex w-full flex-col justify-center lg:w-1/3 lg:pb-24 lg:pt-48">
-          <h1 className="text-4xl font-bold text-black sm:text-5xl">
+        <div className={`flex w-full flex-col justify-center lg:w-1/3 lg:pb-24 lg:pt-48 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          <h1 className="text-4xl font-bold sm:text-5xl">
             Find your
             <br />
             style online
           </h1>
 
-          <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
+          <p className={`max-w-md leading-relaxed xl:text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
             This is a section of some simple filler text, also known as
             placeholder text. It shares characteristics of real text.
           </p>
@@ -39,29 +39,29 @@ const header = () => {
       </div>
 
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-        <div className="flex h-12 w-64 divide-x overflow-hidden rounded-lg border">
+        <div className={`flex h-12 w-64 divide-x overflow-hidden rounded-lg border ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
           <a
             href="#"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
+            className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
             Men
           </a>
           <a
             href="#"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
+            className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
             Women
           </a>
           <a
             href="#"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
+            className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
             Teens
           </a>
         </div>
 
         <div className="flex items-center justify-center gap-4 lg:justify-start">
-          <span className="text-sm font-semibold uppercase tracking-widest text-gray-400 sm:text-base">
+          <span className={`text-sm font-semibold uppercase tracking-widest ${isDarkMode ? 'text-gray-400' : 'text-gray-400'} sm:text-base`}>
             Social
           </span>
           <span className="h-px w-12 bg-gray-200"></span>
@@ -70,7 +70,7 @@ const header = () => {
             <a
               href="#"
               target="_blank"
-              className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+              className={`transition duration-100 ${isDarkMode ? 'text-gray-400 hover:text-gray-500 active:text-gray-600' : 'text-gray-400 hover:text-gray-500 active:text-gray-600'}`}
             >
               <svg
                 className="h-5 w-5"
@@ -87,7 +87,7 @@ const header = () => {
             <a
               href="#"
               target="_blank"
-              className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+              className={`transition duration-100 ${isDarkMode ? 'text-gray-400 hover:text-gray-500 active:text-gray-600' : 'text-gray-400 hover:text-gray-500 active:text-gray-600'}`}
             >
               <svg
                 className="h-5 w-5"
@@ -104,7 +104,7 @@ const header = () => {
             <a
               href="#"
               target="_blank"
-              className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+              className={`transition duration-100 ${isDarkMode ? 'text-gray-400 hover:text-gray-500 active:text-gray-600' : 'text-gray-400 hover:text-gray-500 active:text-gray-600'}`}
             >
               <svg
                 className="h-5 w-5"
@@ -124,4 +124,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

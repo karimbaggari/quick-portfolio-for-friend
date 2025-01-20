@@ -1,19 +1,11 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import LogoCloud from "@/components/logoCloud";
-import Navbar from "@/components/navbar";
-import Reviews from "@/components/reviews";
-import Section from "@/components/section";
+import Main from "@/components/main";
 
-export default function Home() {
+
+const App = () => {
+
   return (
-    <>
-      <Navbar />
-      <Header />
-      <Section />
-      <LogoCloud />
-      <Reviews />
-      <Footer />
-    </>
+  <Main />
   );
-}
+};
+
+export default App;
