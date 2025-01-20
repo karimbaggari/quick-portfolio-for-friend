@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 
 const DropDownNavbar = () => {
     const features = [
-        { name: "Analytics", href: "#analytics" },
-        { name: "Automation", href: "#automation" },
-        { name: "Reports", href: "#reports" },
-        { name: "Integrations", href: "#integrations" },
+        { name: "Food", href: "/food" },
+        { name: "Fitness", href: "/fitness" },
+        { name: "Photography", href: "/photography" },
+        { name: "Personal Pics", href: "/personal-pics" },
     ]
     const [isOpen, setIsOpen] = useState(false)
   return (

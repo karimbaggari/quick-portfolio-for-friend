@@ -44,20 +44,21 @@ const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
             href="#"
             className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
-            Men
+            Food 
           </a>
           <a
             href="#"
             className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
-            Women
+            Fitness
           </a>
           <a
             href="#"
             className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
-            Teens
+            Personal
           </a>
+      
         </div>
 
         <div className="flex items-center justify-center gap-4 lg:justify-start">

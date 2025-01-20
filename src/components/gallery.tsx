@@ -1,4 +1,4 @@
-import React from 'react'
+import Image from "next/image";
 
 const gallery = () => {
   return (
@@ -11,10 +11,12 @@ const gallery = () => {
         <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
           <a
             href="#"
-            className="group relative flex h-[450px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg h-[450px]"
+            className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg h-[450px]"
           >
-            <img
-              src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600"
+            <Image
+              src="/assets/about.jpeg"
+              width={550}
+              height={550}
               loading="lazy"
               alt="Photo by Minh Pham"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
