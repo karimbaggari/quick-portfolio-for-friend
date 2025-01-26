@@ -1,4 +1,4 @@
-import Photography from "@/components/photography";
+import Photography from "../../components/photography";
 import React from "react";
 
 

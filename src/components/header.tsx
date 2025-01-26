@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
@@ -19,18 +19,22 @@ const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
         <div className=" flex w-full  lg:w-2/3">
           <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
-            <img
-              src="https://images.unsplash.com/photo-1542340916-951bb72c8f74?auto=format&q=75&fit=crop&w=550&h=550"
+            <Image
+              src="/assets/about.jpeg"
               loading="lazy"
+              width={550}
+              height={550}
               alt="Photo by Kaung Htet"
               className="h-full w-full object-cover object-center"
             />
           </div>
 
           <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1586295166487-b265f7e83a7f?auto=format&q=75&fit=crop&w=550&h=550"
+            <Image
+              src="/assets/about.jpeg"
               loading="lazy"
+              width={550}
+              height={550}
               alt="Photo by Manny Moreno"
               className="h-full w-full object-cover object-center"
             />
@@ -39,7 +43,7 @@ const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
       </div>
 
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-        <div className={`flex h-12 w-64 divide-x overflow-hidden rounded-lg border ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+        <div className={`flex h-12 w-80 divide-x overflow-hidden rounded-lg border ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
           <a
             href="#"
             className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
@@ -48,15 +52,15 @@ const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
           </a>
           <a
             href="#"
-            className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
+            className={`flex w-1/2 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
-            Fitness
+            Photography
           </a>
           <a
             href="#"
             className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
-            Personal
+            Projects
           </a>
       
         </div>
