@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import DropDownNavbar from "./dropDownNavbar";
+import Image from "next/image";
 
 const Navbar = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
@@ -14,32 +16,29 @@ const Navbar = ({ isDarkMode }: { isDarkMode: boolean }) => {
             className={`inline-flex items-center gap-2.5 text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} md:text-3xl`}
             aria-label="logo"
           >
-            <svg
-              width="95"
-              height="94"
-              viewBox="0 0 95 94"
-              className="h-auto w-6 text-indigo-500"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M96 0V47L48 94H0V47L48 0H96Z" />
-            </svg>
-            Flowrift
+          <Image src="/assets/PP.jpg" alt="logo" width={95} height={94} />
+            Omis Visual
           </Link>
           <nav className="hidden gap-12 lg:flex">
-            <a
-              href="#"
+            <Link
+              href="/"
               className={`text-lg font-semibold transition duration-100 ${isDarkMode ? 'text-white hover:text-indigo-500 active:text-indigo-700' : 'text-gray-600 hover:text-indigo-500 active:text-indigo-700'}`}
             >
               Home
-            </a>
+            </Link>
             <DropDownNavbar />
-            <a
-              href="#"
+            <Link
+              href="/gallery"
+              className={`text-lg font-semibold transition duration-100 ${isDarkMode ? 'text-white hover:text-indigo-500 active:text-indigo-700' : 'text-gray-600 hover:text-indigo-500 active:text-indigo-700'}`}
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/about"
               className={`text-lg font-semibold transition duration-100 ${isDarkMode ? 'text-white hover:text-indigo-500 active:text-indigo-700' : 'text-gray-600 hover:text-indigo-500 active:text-indigo-700'}`}
             >
               About
-            </a>
+            </Link>
           </nav>
  
 
