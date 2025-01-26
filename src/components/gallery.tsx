@@ -85,11 +85,13 @@ const gallery = () => {
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
               <a
                 href="#"
-                className="group relative flex h-[450px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg h-[450px]"
+                className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg h-[450px]"
               >
-                <img
-                  src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600"
+                <Image
+                  src="/assets/about.jpeg"
                   loading="lazy"
+                  width={550}
+                  height={600}
                   alt="Photo by Minh Pham"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
@@ -102,11 +104,13 @@ const gallery = () => {
               </a>
               <a
                 href="#"
-                className="group relative flex h-[450px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 h-[450px]"
+                className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 h-[450px]"
               >
-                <img
-                  src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=1000"
+                <Image
+                  src="/assets/about.jpeg"
                   loading="lazy"
+                  width={550}
+                  height={600}
                   alt="Photo by Magicle"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
@@ -119,11 +123,13 @@ const gallery = () => {
               </a>
               <a
                 href="#"
-                className="group relative flex h-[450px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 h-[450px]"
+                className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:c"
               >
-                <img
-                  src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000"
+                <Image
+                  src="/assets/about.jpeg"
                   loading="lazy"
+                  width={550}
+                  height={600}
                   alt="Photo by Martin Sanchez"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
@@ -136,11 +142,13 @@ const gallery = () => {
               </a>
               <a
                 href="#"
-                className="group relative flex h-[450px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg h-[450px]"
+                className="group relative flex h-[450px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg"
               >
-                <img
-                  src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600"
+                <Image
+                  src="/assets/about.jpeg"
                   loading="lazy"
+                  width={550}
+                  height={600}
                   alt="Photo by Lorenzo Herrera"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
