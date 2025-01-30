@@ -1,5 +1,4 @@
 "use client"
-import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Navbar from '@/components/navbar';
 import Reviews from '@/components/reviews';
@@ -20,11 +19,10 @@ const App = () => {
     
      <Navbar isDarkMode={isDarkMode} />
       <Header isDarkMode={isDarkMode} />
+
       <Section isDarkMode={isDarkMode} />
-      
+      <Reviews isDarkMode={isDarkMode} />      
       <Projects isDarkMode={isDarkMode} />
-      <Reviews isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { Play, Pause, Info } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Footer from "./footer";
 
 const projects = [
   { src: "https://ik.imagekit.io/p2myilloy/fitness_projects/5.mp4", title: "Urban Fitness" },
@@ -39,7 +40,7 @@ const VideoCard = ({
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-lg shadow-lg h-[650px] ${index === 0 ? "col-span-2 row-span-2" : ""
+      className={`relative overflow-hidden rounded-lg shadow-lg ${index === 0 ? "col-span-2 row-span-2" : ""
         }`}
       style={{ y: parallaxOffset }}
       initial={{ opacity: 0, y: 20 }}
@@ -97,7 +98,7 @@ const VideoCard = ({
 
 export default function VideoShowcase({ isDarkMode }: { isDarkMode: boolean }) {
   return (
-    <div className={isDarkMode ? "bg-gray-900" : "bg-white"}>
+    <div className={`h-[650px] ${isDarkMode ? "bg-gray-900" : "bg-white"}`}>
 
       <div
         className={
@@ -119,7 +120,7 @@ export default function VideoShowcase({ isDarkMode }: { isDarkMode: boolean }) {
         </div>
 
       </div>
-      <div className="flex items-center justify-center mt-12 gap-4 lg:justify-center">
+      <div className="flex items-center justify-center mt-20 p-[15px] relative bottom-20 gap-4 lg:justify-center">
         <span className={`text-sm font-semibold uppercase tracking-widest ${isDarkMode ? 'text-gray-400' : 'text-gray-400'} sm:text-base`}>
           More Projects on Instagram to see !
         </span>
@@ -144,6 +145,7 @@ export default function VideoShowcase({ isDarkMode }: { isDarkMode: boolean }) {
           </a>
         </div>
       </div>
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }
