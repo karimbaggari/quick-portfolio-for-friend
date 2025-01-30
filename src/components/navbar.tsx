@@ -5,8 +5,6 @@ import Image from "next/image";
 
 const Navbar = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
-
-
   return (
     <div className={`${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -16,7 +14,7 @@ const Navbar = ({ isDarkMode }: { isDarkMode: boolean }) => {
             className={`inline-flex items-center gap-2.5 text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} md:text-3xl`}
             aria-label="logo"
           >
-          <Image src="/assets/PP.jpg" alt="logo" width={95} height={94} />
+          <Image src="https://ik.imagekit.io/p2myilloy/Jed_North_Logo.png" alt="logo" width={95} height={94} />
             Omis Visual
           </Link>
           <nav className="hidden gap-12 lg:flex">

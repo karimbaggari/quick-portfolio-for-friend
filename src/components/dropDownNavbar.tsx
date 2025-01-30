@@ -7,7 +7,6 @@ const DropDownNavbar = () => {
     const features = [
         { name: "Food", href: "/food" },
         { name: "Photography", href: "/photography" },
-        { name: "Projects", href: "/projects" },
     ]
     const [isOpen, setIsOpen] = useState(false)
   return (

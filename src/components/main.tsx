@@ -7,19 +7,22 @@ import Section from '@/components/section';
 import React from 'react';
 import { useTheme } from '@/hooks/useTheme';
 import Projects from '@/components/projects';
+import { ThemeToggle } from './toggleTheme';
 
 const App = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <div className={isDarkMode ? 'bg-gray-900' : 'bg-white'}>
-      <button onClick={toggleTheme} className="p-2 bg-gray-200 absolute top-0 right-0 rounded">
-        Toggle Theme
-      </button>
-      <Navbar isDarkMode={isDarkMode} />
+    <div className="flex justify-end relative top-2 right-4"> 
+     <ThemeToggle theme={isDarkMode} setTheme={toggleTheme} />
+     </div>
+    
+     <Navbar isDarkMode={isDarkMode} />
       <Header isDarkMode={isDarkMode} />
       <Section isDarkMode={isDarkMode} />
-      <Projects />
+      
+      <Projects isDarkMode={isDarkMode} />
       <Reviews isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </div>

@@ -6,7 +6,6 @@ import { Play, Pause, Info } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTheme } from "@/hooks/useTheme";
 
 const projects = [
   { src: "https://ik.imagekit.io/p2myilloy/fitness_projects/5.mp4", title: "Urban Fitness" },
@@ -40,9 +39,8 @@ const VideoCard = ({
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-lg shadow-lg h-[650px] ${
-        index === 0 ? "col-span-2 row-span-2" : ""
-      }`}
+      className={`relative overflow-hidden rounded-lg shadow-lg h-[650px] ${index === 0 ? "col-span-2 row-span-2" : ""
+        }`}
       style={{ y: parallaxOffset }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -97,32 +95,53 @@ const VideoCard = ({
   );
 };
 
-export default function VideoShowcase() {
-  const { isDarkMode, toggleTheme } = useTheme();
+export default function VideoShowcase({ isDarkMode }: { isDarkMode: boolean }) {
   return (
-    <div
-      className={
-        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      }
-    >
-      <button
-        onClick={toggleTheme}
-        className={`p-2 ${
-          isDarkMode ? "bg-gray-900" : "bg-gray-200"
-        } absolute top-0 right-0 rounded`}
+    <div className={isDarkMode ? "bg-gray-900" : "bg-white"}>
+
+      <div
+        className={
+          isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+        }
       >
-        Toggle Theme
-      </button>
-      <div className={`${isDarkMode ? "bg-gray-900" : "bg-white"} ${isDarkMode ? "text-white" : "text-gray-900"} py-12`}>
-        <div className="container mx-auto px-4">
-          <h1 className={`text-4xl font-bold mb-8 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-            Fitness in Motion
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[300px]">
-            {projects.map((project, index) => (
-              <VideoCard key={index} {...project} index={index} />
-            ))}
+        <div className={`${isDarkMode ? "bg-gray-900" : "bg-white"} ${isDarkMode ? "text-white" : "text-gray-900"} py-12`}>
+          <div className="container mx-auto px-4">
+            <h1 className={`text-4xl font-bold mb-8 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+              Click to view
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[300px]">
+              {projects.map((project, index) => (
+                <VideoCard key={index} {...project} index={index} />
+              ))}
+            </div>
           </div>
+
+        </div>
+
+      </div>
+      <div className="flex items-center justify-center mt-12 gap-4 lg:justify-center">
+        <span className={`text-sm font-semibold uppercase tracking-widest ${isDarkMode ? 'text-gray-400' : 'text-gray-400'} sm:text-base`}>
+          More Projects on Instagram to see !
+        </span>
+        <span className="h-px w-12 bg-gray-200"></span>
+
+        <div className="flex gap-4">
+          <a
+            href="https://www.instagram.com/omis.visual/"
+            target="_blank"
+            className={`transition duration-100 ${isDarkMode ? 'text-gray-400 hover:text-gray-500 active:text-gray-600' : 'text-gray-400 hover:text-gray-500 active:text-gray-600'}`}
+          >
+            <svg
+              className="h-5 w-5"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

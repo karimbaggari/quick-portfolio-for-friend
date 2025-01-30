@@ -50,7 +50,7 @@ const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
           <Link
             href="/food"
-            className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
+            className={`flex w-1/2 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
           >
             Food
           </Link>
@@ -60,12 +60,7 @@ const Header = ({ isDarkMode }: { isDarkMode: boolean }) => {
           >
             Photography
           </Link>
-          <Link
-            href="/projects"
-            className={`flex w-1/3 items-center justify-center transition duration-100 ${isDarkMode ? 'text-white hover:bg-gray-700 active:bg-gray-600' : 'text-gray-500 hover:bg-gray-100 active:bg-gray-200'}`}
-          >
-            Projects
-          </Link>
+       
 
         </div>
 
