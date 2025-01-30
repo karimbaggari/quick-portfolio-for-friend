@@ -3,15 +3,15 @@ import React from "react";
 import Image from "next/image";
 import { useTheme } from "@/hooks/useTheme";
 import Navbar from "./navbar";
+import { ThemeToggle } from "./toggleTheme";
 
 const About = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   return (
-    <div className={`${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"} py-6 sm:py-8 lg:py-12`}>
-      <div className={isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}>
-      <button onClick={toggleTheme} className="p-2 bg-gray-200 absolute top-0 right-0 rounded">
-        Toggle Theme
-      </button>
+    <div className={`${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
+     <div className="flex justify-end relative top-2 right-4"> 
+     <ThemeToggle theme={isDarkMode} setTheme={toggleTheme} />
+     </div>
       <Navbar isDarkMode={isDarkMode} />
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
@@ -55,7 +55,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

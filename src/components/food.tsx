@@ -3,6 +3,7 @@ import Image from "next/image";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import { useTheme } from "@/hooks/useTheme";
+import { ThemeToggle } from "./toggleTheme";
 
 const Gallery = () => {
   const Images = [
@@ -16,12 +17,9 @@ const Gallery = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   return (
     <div className={isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}>
-      <button
-        onClick={toggleTheme}
-        className={`p-2 ${isDarkMode ? "bg-gray-900" : "bg-gray-200"} absolute top-0 right-0 rounded`}
-      >
-        Toggle Theme
-      </button>
+      <div className="flex justify-end relative top-2 right-4"> 
+     <ThemeToggle theme={isDarkMode} setTheme={toggleTheme} />
+     </div>
       <Navbar isDarkMode={isDarkMode} />
       <div className={`py-6 sm:py-8 lg:py-12 ${isDarkMode ? "bg-gray-900" : "bg-white"}`}>
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">

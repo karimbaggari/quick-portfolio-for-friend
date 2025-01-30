@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useTheme } from "@/hooks/useTheme";
 import Footer from "./footer";
 import Navbar from "./navbar";
+import { ThemeToggle } from "./toggleTheme";
 const Gallery = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const Images = [
@@ -10,7 +11,7 @@ const Gallery = () => {
     "https://ik.imagekit.io/p2myilloy/assets/photography/2.JPG",
     "https://ik.imagekit.io/p2myilloy/assets/photography/3.JPG",
     "https://ik.imagekit.io/p2myilloy/assets/photography/4.JPG",
-      "https://ik.imagekit.io/p2myilloy/assets/photography/5.JPG",
+    "https://ik.imagekit.io/p2myilloy/assets/photography/5.JPG",
     "https://ik.imagekit.io/p2myilloy/assets/photography/6.JPG",
     "https://ik.imagekit.io/p2myilloy/assets/photography/7.JPG",
     "https://ik.imagekit.io/p2myilloy/assets/photography/8.JPG",
@@ -44,18 +45,15 @@ const Gallery = () => {
         isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }
     >
+       <div className="flex justify-end relative top-2 right-4">
+          <ThemeToggle theme={isDarkMode} setTheme={toggleTheme} />
+        </div>
       <Navbar isDarkMode={isDarkMode} />
       <div
-        className={`${
-          isDarkMode ? "bg-gray-900" : "bg-white"
-        } py-6 sm:py-8 lg:py-12`}
+        className={`${isDarkMode ? "bg-gray-900" : "bg-white"
+          } py-6 sm:py-8 lg:py-12`}
       >
-        <button
-          onClick={toggleTheme}
-          className="p-2 bg-gray-200 absolute top-0 right-0 rounded"
-        >
-          Toggle Theme
-        </button>
+       
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <h2 className={`mb-4 text-center text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'} md:mb-8 lg:text-3xl xl:mb-12`}>
             Photography
