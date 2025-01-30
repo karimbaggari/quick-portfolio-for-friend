@@ -1,18 +1,19 @@
-"use client";
-import Link from "next/link";
-import { ChevronDown } from 'lucide-react';
-import React, { useState } from 'react'
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { ChevronDown } from "lucide-react"
 
 const DropDownNavbar = () => {
-    const features = [
-        { name: "Food", href: "/food" },
-        { name: "Photography", href: "/photography" },
-    ]
-    const [isOpen, setIsOpen] = useState(false)
+  const features = [
+    { name: "Food", href: "/food" },
+    { name: "Photography", href: "/photography" },
+  ]
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div>
-       
-         <button
+    <div className="relative">
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="inline-flex items-center gap-1 text-lg font-semibold text-indigo-600 hover:text-indigo-500 transition-colors duration-200"
       >
@@ -22,7 +23,7 @@ const DropDownNavbar = () => {
         />
       </button>
       {isOpen && (
-        <div className="absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+        <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 lg:left-1/2 lg:-translate-x-1/2">
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {features.map((feature) => (
               <Link
@@ -42,3 +43,4 @@ const DropDownNavbar = () => {
 }
 
 export default DropDownNavbar
+
