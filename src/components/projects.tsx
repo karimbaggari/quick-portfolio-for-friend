@@ -7,18 +7,10 @@ import { useParallax } from "@/hooks/useParallax";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTheme } from "@/hooks/useTheme";
-import Navbar from "./navbar";
-import Footer from "./footer";
 
 const projects = [
-  { src: "/assets/fitness_projects/1.mp4", title: "Urban Fitness" },
-  { src: "/assets/fitness_projects/2.mp4", title: "Nature Workout" },
-  { src: "/assets/fitness_projects/3.mp4", title: "Studio Session" },
-  { src: "/assets/fitness_projects/4.mp4", title: "Beach Training" },
-  { src: "/assets/fitness_projects/5.mp4", title: "Mountain Challenge" },
-  { src: "/assets/fitness_projects/6.mp4", title: "City Run" },
-  { src: "/assets/fitness_projects/7.mp4", title: "Gym Intensity" },
-  { src: "/assets/fitness_projects/8.mp4", title: "Yoga Serenity" },
+  { src: "https://ik.imagekit.io/p2myilloy/fitness_projects/5.mp4", title: "Urban Fitness" },
+  { src: "https://ik.imagekit.io/p2myilloy/fitness_projects/7.mp4", title: "Nature Workout" },
 ];
 
 const VideoCard = ({
@@ -37,6 +29,7 @@ const VideoCard = ({
   const togglePlay = () => {
     const video = document.getElementById(`video-${index}`) as HTMLVideoElement;
     if (video.paused) {
+      video.currentTime = video.duration;
       video.play();
       setIsPlaying(true);
     } else {
@@ -47,7 +40,7 @@ const VideoCard = ({
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-lg shadow-lg ${
+      className={`relative overflow-hidden rounded-lg shadow-lg h-[650px] ${
         index === 0 ? "col-span-2 row-span-2" : ""
       }`}
       style={{ y: parallaxOffset }}
@@ -120,8 +113,7 @@ export default function VideoShowcase() {
       >
         Toggle Theme
       </button>
-      <Navbar isDarkMode={isDarkMode} />
-      <div className={`min-h-screen ${isDarkMode ? "bg-gray-900" : "bg-white"} ${isDarkMode ? "text-white" : "text-gray-900"} py-12`}>
+      <div className={`${isDarkMode ? "bg-gray-900" : "bg-white"} ${isDarkMode ? "text-white" : "text-gray-900"} py-12`}>
         <div className="container mx-auto px-4">
           <h1 className={`text-4xl font-bold mb-8 text-center ${isDarkMode ? "text-white" : "text-gray-900"}`}>
             Fitness in Motion
@@ -133,7 +125,6 @@ export default function VideoShowcase() {
           </div>
         </div>
       </div>
-      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }

@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const section = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const Images = [
-    "/assets/photography/10.jpg",
-    "/assets/photography/11.jpg",
-    "/assets/photography/12.jpg",
-    "/assets/photography/27.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/photography/10.JPG",
+    "https://ik.imagekit.io/p2myilloy/assets/photography/11.JPG",
+    "https://ik.imagekit.io/p2myilloy/assets/photography/12.JPG",
+    "https://ik.imagekit.io/p2myilloy/assets/photography/27.JPG",
   ];
   return (
     <div className={`py-6 sm:py-8 lg:py-12 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>

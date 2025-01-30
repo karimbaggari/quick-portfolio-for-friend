@@ -1,12 +1,12 @@
 "use client"
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import LogoCloud from '@/components/logoCloud';
 import Navbar from '@/components/navbar';
 import Reviews from '@/components/reviews';
 import Section from '@/components/section';
 import React from 'react';
 import { useTheme } from '@/hooks/useTheme';
+import Projects from '@/components/projects';
 
 const App = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -19,7 +19,7 @@ const App = () => {
       <Navbar isDarkMode={isDarkMode} />
       <Header isDarkMode={isDarkMode} />
       <Section isDarkMode={isDarkMode} />
-      <LogoCloud isDarkMode={isDarkMode} />
+      <Projects />
       <Reviews isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </div>
