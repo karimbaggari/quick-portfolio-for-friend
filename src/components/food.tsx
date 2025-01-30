@@ -6,12 +6,12 @@ import { useTheme } from "@/hooks/useTheme";
 
 const Gallery = () => {
   const Images = [
-    "/assets/food/1.jpg",
-    "/assets/food/2.jpg",
-    "/assets/food/3.jpg",
-    "/assets/food/4.jpg",
-    "/assets/food/5.jpg",
-    "/assets/food/6.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/food/1.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/food/2.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/food/3.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/food/4.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/food/5.jpg",
+    "https://ik.imagekit.io/p2myilloy/assets/food/6.jpg",
   ];
   const { isDarkMode, toggleTheme } = useTheme();
   return (
