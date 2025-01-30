@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import DropDownNavbar from "./dropDownNavbar";
-import Image from "next/image";
 
 const Navbar = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
@@ -14,7 +13,6 @@ const Navbar = ({ isDarkMode }: { isDarkMode: boolean }) => {
             className={`inline-flex items-center gap-2.5 text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} md:text-3xl`}
             aria-label="logo"
           >
-          <Image src="https://ik.imagekit.io/p2myilloy/Jed_North_Logo.png" alt="logo" width={95} height={94} />
             Omis Visual
           </Link>
           <nav className="hidden gap-12 lg:flex">
