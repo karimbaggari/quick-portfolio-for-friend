@@ -18,7 +18,7 @@ const About = () => {
           <div>
             <div className={`h-64 overflow-hidden rounded-lg ${isDarkMode ? "bg-gray-800" : "bg-gray-100"} shadow-lg md:h-auto`}>
               <Image
-                src={"/assets/about.jpeg"}
+                src={"https://ik.imagekit.io/p2myilloy/assets/about.jpeg"}
                 width={500}
                 height={500}
                 alt="About"
